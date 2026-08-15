@@ -196,10 +196,6 @@ location ~* ^/(H|uploads)/.*\.(php|php3|php5|phtml|phar|asp|aspx|jsp|cgi)$ {
 - 版本号升级至 1.1
 - 完善安装脚本（install.php + install.sql）
 
-## License
 
-MIT License
-
----
 
 **高先生笔记** | [www.gxsnote.cn](https://www.gxsnote.cn) | QQ 67031002
