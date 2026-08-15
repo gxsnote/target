@@ -1,0 +1,2 @@
+# 禁止直接访问 config 目录
+Require all denied

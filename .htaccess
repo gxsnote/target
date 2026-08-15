@@ -1,0 +1,25 @@
+# 网络安全攻防演练靶场 v1.1 安全配置
+# 作者：高先生笔记 | www.gxsnote.cn | QQ 67031002
+
+# 禁止访问敏感目录
+RedirectMatch 403 ^/includes/
+RedirectMatch 403 ^/config/
+RedirectMatch 403 ^/preferences/
+
+# 禁止访问敏感文件类型
+<FilesMatch "\.(sql|bak|ini|log|md|sh|conf)$">
+    Require all denied
+</FilesMatch>
+
+# 禁止访问 flag 文件
+<FilesMatch "^(flag|.*flag.*)\.txt$">
+    Require all denied
+</FilesMatch>
+
+# 禁止访问 .htaccess 本身
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# 自定义错误页面保持默认
+Options -Indexes
